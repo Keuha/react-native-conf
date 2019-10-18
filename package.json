@@ -1,0 +1,60 @@
+{
+  "name": "MyApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "test": "jest",
+    "debug": "node --inspect-brk jest --runInBand",
+    "lint": "eslint .",
+    "lintFix": "eslint . --fix"
+  },
+  "dependencies": {
+    "react": "16.9.0",
+    "react-native": "0.61.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/runtime": "7.5.5",
+    "@react-native-community/eslint-config": "0.0.3",
+    "enzyme": "^3.10.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-native": "^3.7.0",
+    "husky": "^3.0.5",
+    "jest": "24.9.0",
+    "jsdom": "15.1.1",
+    "jsdom-global": "3.0.2",
+    "metro-react-native-babel-preset": "0.54.1",
+    "prettier": "^1.18.2",
+    "react-dom": "^16.9.0",
+    "sinon": "^7.4.2"
+  },
+  "jest": {
+    "automock": false,
+    "testEnvironment": "jsdom",
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "verbose": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm test"
+    }
+  }
+}
